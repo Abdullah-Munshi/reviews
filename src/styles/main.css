@@ -1043,16 +1043,16 @@ data-styled.g74[id="StyledLinkTextContainer-feefo-ui__sc-a2xigi-1"] {
   content: "eiOCzP,";
 }
 .bkPdyc {
-  display: flex;
+  outline-offset: 4px;
+  background-color: rgb(255, 209, 0);
+  border-radius: 0.2475rem;
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  background-color: #e2eaf4;
-  border-radius: 0.2475rem;
   width: 17px;
   height: 17px;
   transition: opacity 0.15s ease-in-out;
-  outline-offset: 4px;
+  display: flex;
 }
 .bkPdyc:hover {
   opacity: 0.7;
