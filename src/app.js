@@ -109,16 +109,24 @@ const reviewsManager = new ReviewsManager({
 // Accordion Data
 const accordionData = [
   {
-    title: "Section 1",
-    content: "Content for section 1...",
+    title: "How are Feefo reviews collected?",
+    content:
+      "We independently collect feedback on behalf of the businesses that work with us. Our platform only reaches out to verified buyers, so you can be sure you’re reading reviews from real customers.",
   },
   {
-    title: "Section 2",
-    content: "Content for section 2...",
+    title: "Who can leave a Feefo review?",
+    content:
+      "Only customers with proof of purchase can leave a Feefo review. We ensure this by reaching out to buyers straight after their transaction.",
   },
   {
-    title: "Section 3",
-    content: "Content for section 3...",
+    title: "How do we verify reviews?",
+    content:
+      "We verify that reviews are from genuine customers by matching them to a sale or transaction. People are only invited to leave a review after purchasing from the business.",
+  },
+  {
+    title: "How do we deal with fake reviews?",
+    content:
+      "We verify that reviews are from genuine customers by matching them to a sale or transaction. People are only invited to leave a review after purchasing from the business.",
   },
 ];
 
@@ -127,3 +135,49 @@ const accordion = new AccordionManager({
   data: accordionData,
   allowMultiple: false, // Set to true if you want multiple panels open at once
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize read more/less for all elements with data-para
+  initReadMore();
+});
+
+function initReadMore(maxChars = 120) {
+  // You can adjust default maxChars
+  const paragraphs = document.querySelectorAll('[data-para="para"]');
+
+  paragraphs.forEach((container) => {
+    const paragraph = container.querySelector(".text");
+    const button = container.querySelector(".button");
+
+    if (!paragraph || !button) return;
+
+    // Store the original text
+    const fullText = paragraph.textContent.trim();
+
+    // Only apply if text is longer than maxChars
+    if (fullText.length <= maxChars) {
+      button.style.display = "none";
+      return;
+    }
+
+    // Set initial state
+    paragraph.dataset.fullText = fullText;
+    const truncatedText = fullText.slice(0, maxChars) + "...";
+    paragraph.textContent = truncatedText;
+
+    // Add event listener to button
+    button.addEventListener("click", function () {
+      const isExpanded = paragraph.dataset.expanded === "true";
+
+      if (!isExpanded) {
+        paragraph.textContent = paragraph.dataset.fullText;
+        button.textContent = "Read Less";
+        paragraph.dataset.expanded = "true";
+      } else {
+        paragraph.textContent = truncatedText;
+        button.textContent = "Read All";
+        paragraph.dataset.expanded = "false";
+      }
+    });
+  });
+}

@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <title>
       Feefo Company Reviews | https://www.feefo.com/reviews/feefo-com reviews |
       Feefo
     </title>
-    <!-- Main Css -->
-    <link rel="stylesheet" href="./styles/main.css" />
+    <!-- Main Css and JS -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <script type="module" src="app.js"></script>
   </head>
 
   <body>
@@ -1103,12 +1105,8 @@
             >
               About Feefo
             </div>
-            <div
-              style="-webkit-line-clamp: 3"
-              data-aqa-id="merchant-profile-description"
-              class="sc-8420f12c-2 jZIIGu"
-            >
-              <div class="sc-1edd9af3-0 hRXwrD">
+            <div class="sc-8420f12c-2 jZIIGu" data-para="para">
+              <p class="sc-1edd9af3-0 hRXwrD text">
                 Feefo helps both consumers and businesses make the right
                 decisions.    Founded in 2010, Feefo works with 6,500+ brands
                 worldwide to collect reliable and constructive reviews they can
@@ -1121,27 +1119,10 @@
                 exceptional services that their customers can depend on - every
                 time.    We are proud to work with companies, large and small,
                 from household names to local heroes.
-              </div>
+              </p>
+              <button class="button style-1 flEjGI">Read All</button>
             </div>
-            <span data-aqa-id="merchant-profile-read-more-button"
-              ><div
-                id="merchant-profile-read-all"
-                class="UnderlinedButtonStyle-feefo-ui__sc-1pft5ie-0 flEjGI"
-              >
-                Read all<svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                  id="merchant-profile-read-all-icon-right"
-                >
-                  <path
-                    fill="#292F36"
-                    d="M2.977 6.352a.563.563 0 0 1 .796 0L9 11.58l5.227-5.228a.563.563 0 0 1 .796.796l-5.625 5.625a.56.56 0 0 1-.796 0L2.977 7.148a.56.56 0 0 1 0-.796"
-                  ></path>
-                </svg></div
-            ></span>
+
             <div
               data-aqa-id="merchant-profile-telephone"
               class="sc-8420f12c-3 hyQJEV"
@@ -1509,13 +1490,8 @@
               <a
                 target="_blank"
                 href="https://www.feefo.com/uk/business/features/sustainability-awareness-solution/ecolabels"
-                title="Link to Feefo Sustainability Badges Page"
-                aria-label="Go to the Feefo Sustainability Badges Page"
-                font-size="16"
-                fontcolour="#292F36"
-                id="see-other-badges"
-                class="StyledLinkText-feefo-ui__sc-a2xigi-0 jgeAlx"
-                >Learn more<svg
+                class="StyledLinkText-feefo-ui__sc-a2xigi-0 jgeAlx custom-edit"
+                >Learn more about Feefo<svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
                   height="1em"
@@ -2349,8 +2325,5 @@
         </div>
       </footer>
     </div>
-
-    <!-- Link to the bundled JS -->
-    <script type="module" src="./main.js"></script>
   </body>
 </html>

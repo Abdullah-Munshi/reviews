@@ -1,4 +1,5 @@
-import NiceSelect from "nice-select2";
+import NiceSelect from "../../node_modules/nice-select2/dist/js/nice-select2.js";
+import "../../node_modules/nice-select2/dist/css/nice-select2.css";
 import { templates, icons } from "./templates";
 
 class ReviewsManager {
